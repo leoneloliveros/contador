@@ -1,5 +1,5 @@
 require 'sinatra'
-  @@cont = 0
+  class_variable_set(:@@cont, 0)
 get '/' do
   @@cont += 1
   erb :index
