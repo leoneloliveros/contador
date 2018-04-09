@@ -1,6 +1,9 @@
 require 'sinatra'
-  class_variable_set(:@@cont, 0)
+  @@cont = 0
 get '/' do
-  @@cont += 1
   erb :index
+end
+post '/' do
+  @@cont += 1
+  redirect '/'
 end
